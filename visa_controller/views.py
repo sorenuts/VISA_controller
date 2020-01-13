@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.http import HttpResponse
+from . import visafunc
 
 # Create your views here.
 def index(request):
@@ -13,6 +14,7 @@ def action_index(request):
     if request.method == 'GET':
         if 'VPP' in request.GET:
             print("cout: VPP")
+            visafunc.measure_VPP()
         if 'VMAX' in request.GET:
             print("cout: VMAX")
     return redirect('visa_controller:index')
