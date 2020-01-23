@@ -5,5 +5,6 @@ app_name = 'visa_controller'
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('action_index/', views.action_index, name='action_index'),
+    path('connect/', views.connect, name='connect'),
+    path('measure/', views.measure, name='measure'),
 ]

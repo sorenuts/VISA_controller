@@ -1,7 +1,12 @@
 <h1>VISA Controller</h1>
 
-<form action="{% url 'visa_controller:action_index' %}" method="get">
+<form action="{% url 'visa_controller:measure' %}" method="get">
 
     <button type="submit" name="VPP">VPP</button>
     <button type="submit" name="VMAX">VMAX</button>
 </form>
+<form action="{% url 'visa_controller:connect' %}" method="get">
+    <button type="submit">Connect VISA</button>
+</form>
+
+{{ query_out }}
